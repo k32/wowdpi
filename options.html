@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h2>Configuration:</h2>
+    <form>
+        <label>Insert whitespace before host value <input type="checkbox" id="addSpace" ></label><br/><br/>
+	<label>Replace 'Host' key with:<br/><input type="text" id="hostValue" style="width: 100%"></label><br/><br/>
+	Applies to (<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a> separated by new-line):<br/>
+	<textarea id="filterList" style="width: 100%"></textarea><br/>
+	<br/>
+        <button type="button" id="saveButton" style="float:right">Save</button>
+    </form>
+
+    <script src="options.js"></script>
+  </body>
+
+</html>
