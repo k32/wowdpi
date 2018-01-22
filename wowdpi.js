@@ -3,7 +3,7 @@ browser.storage.local.get(["addSpace", "hostValue", "filterList"]).then(function
 	var config = {
 		addSpace: newconfig.addSpace || false,
 		hostValue: newconfig.hostValue || "HoSt",
-		filterList: newconfig.filterList || ["*://*/*"]
+		filterList: newconfig.filterList || ["http://*/*"]
 	};
 
 	// changes request headers
@@ -33,7 +33,7 @@ browser.storage.local.get(["addSpace", "hostValue", "filterList"]).then(function
 
 		// remove old listener if required
 		if(browser.webRequest.onBeforeSendHeaders.hasListener(mangleHost))
-			browser.webRequest.onBeforeSendHeaders.removeListener(mangleHost)
+			browser.webRequest.onBeforeSendHeaders.removeListener(mangleHost);
 
 		// listen for headers
 		browser.webRequest.onBeforeSendHeaders.addListener(
